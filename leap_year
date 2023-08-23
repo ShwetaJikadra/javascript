@@ -1,0 +1,9 @@
+let y=2020;
+if(y%400==0 )
+{
+    console.log("Year is Leap year")
+}
+else
+{
+    console.log("Year is Not leap year")
+}
