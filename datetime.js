@@ -25,7 +25,21 @@
 // console.log(a.getUTCDay())
 // console.log(a.getUTCMilliseconds())
 // console.log(a.toLocaleTimeString())
-var t;
+
 let a1=new Date();
-t=a1.setFullYear(2000)
-console.log(t)
+a1.setFullYear(2020)
+console.log(a1);
+a1.setHours(20)
+console.log(a1)
+a1.setMilliseconds(1000000000000000)
+console.log(a1)
+a1.setMinutes(30)
+console.log(a1)
+a1.setSeconds(200)
+console.log(a1)
+a1.setTime(100)
+console.log(a1)
+a1.setUTCFullYear(2000)
+console.log(a1)
+a1.setUTCMonth(10)
+console.log(a1)
