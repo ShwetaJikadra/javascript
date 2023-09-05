@@ -3,4 +3,9 @@
     console.log("hello world..............")
 })();
 
-((a,b))
+((a,b)=>
+{
+
+
+    console.log("product is :",a*b)
+})(22,3)
