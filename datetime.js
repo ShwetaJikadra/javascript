@@ -43,3 +43,7 @@ a1.setUTCFullYear(2000)
 console.log(a1)
 a1.setUTCMonth(10)
 console.log(a1)
+
+
+let aa=new Date();
+console.log(Date.now())
