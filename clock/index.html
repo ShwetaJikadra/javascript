@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        #clock
+         {
+           height: 135px;
+           width: 700px;
+           background-color: azure;
+           font-size:100px;
+           color: brown;
+           align-items: center;
+          align-items: center;
+           margin-left: 20%;
+           text-align: center;
+           margin-top: 20%;
+           margin-right: auto;
+           font-weight: bolder;
+           border:2px black solid;
+         }
+         #ampm
+        {
+           height: 150px;
+           width: 100px; 
+           background-color: azure;
+           font-size:100px;
+        }
+    </style>
+    <script>
+    
+        function digital_clock() {
+            
+            const d = new Date();
+            let ap="AM";
+            let hours = d.getHours();
+    
+            if(hours>=12)
+            {
+                hours = hours-12;
+                console.log(hours)
+                ap = "PM";
+            } 
+            
+    
+             hours = String(hours).padStart(2, '0');
+             minutes = String(d.getMinutes()).padStart(2, '0');
+             seconds = String(d.getSeconds()).padStart(2, '0');
+            
+    
+            // document.getElementById("clock").innerText = `${hours}:${minutes}:${seconds} ${ap}`;
+            document.getElementById("clock").innerText = hours + " : " + minutes + " : " + seconds +" " + ap;
+            
+            setTimeout(digital_clock, 1000);
+        }
+    
+       
+      
+        // digital_clock();
+       
+    </script>
+</head>
+<body onload="digital_clock()">
+
+<div id="clock"></div>
+
+
+
+</body>
+</html>
