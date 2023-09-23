@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randome String Generator
+    </title>
+    <style>
+         .container
+      {
+  max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    background-color: bisque;
+      }
+      p {
+    margin-top: 20px;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+   
+}
+button
+{
+  background-color:rgb(193, 154, 103);
+    color:rgb(218, 212, 40);
+    font-weight: bolder;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <p>Random String :<span id='len'></span></p>
+        <button onclick="ran()">Get String</button>
+      </div>
+      <script>
+           function ran()
+           {
+            const len= parseInt(prompt("Enter the length of the random string:"));
+            
+            if(isNaN(len))
+            {
+              alert("please enter Right length:")
+            }
+             else
+             {
+    const str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    let txt = '';
+    for (let i = 0; i < len; i++) {
+       
+        txt += str.charAt(Math.floor(Math.random() * str.length));
+    }
+
+   
+    document.getElementById('len').textContent = txt;
+           }
+          }
+      </script>
+</body>
+</html>

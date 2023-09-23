@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Length Counter</title>
+    <style>
+      .container
+      {
+  max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    background-color: bisque;
+      }
+      p {
+    margin-top: 20px;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+   
+}
+button
+{
+  background-color:rgb(193, 154, 103);
+    color:rgb(218, 212, 40);
+    font-weight: bolder;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+}
+#txt
+{
+  font-weight: bold;
+  border: 2px black solid;
+}
+    </style>
+</head>
+
+<body>
+      <div class="container">
+        <input type="text" placeholder="type any word" id="txt">
+        <p>Length :<span id=len></span></p>
+        <button onclick="counter()">Get Length</button>
+      </div>
+      <script>
+           
+          
+
+
+            function counter()
+            {
+                  let word=document.getElementById('txt').value
+                  let len=String(word.trim())
+                  document.getElementById('len').textContent=len.length
+                  
+            }
+            counter();
+          
+            
+      </script>
+</body>
+</html>
